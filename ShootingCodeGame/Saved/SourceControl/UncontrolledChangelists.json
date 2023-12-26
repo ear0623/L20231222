@@ -7,8 +7,14 @@
 			"files": [
 				"C:/Work/VR16/ShootingCodeGame/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset",
 				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/Widget/ShootingHudWidget.uasset",
-				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/Widget/BP_ShootingHUD.uasset",
-				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/GameMode/BP_ShootingGameMode.uasset"
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/GameMode/BP_ShootingGameMode.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/GameMode/BP_ShootingPlayerState.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/GameMode/BP_ShootingHUD.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/BP_Weapon.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/BP_MyBall.uasset",
+				"C:/Work/VR16/ShootingCodeGame/Content/ShootingGame/Widget/BP_ShootingHUD.uasset"
 			]
 		}
 	]

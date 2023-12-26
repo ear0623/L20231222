@@ -16,8 +16,74 @@ void EmptyLinkFunctionForGeneratedCodeShootingHUD() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_ShootingCodeGame();
 // End Cross Module References
+	DEFINE_FUNCTION(AShootingHUD::execOnUpdateMyHP)
+	{
+		P_GET_PROPERTY(FFloatProperty,Z_Param_CuerHP);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_MaxHP);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnUpdateMyHP_Implementation(Z_Param_CuerHP,Z_Param_MaxHP);
+		P_NATIVE_END;
+	}
+	struct ShootingHUD_eventOnUpdateMyHP_Parms
+	{
+		float CuerHP;
+		float MaxHP;
+	};
+	static FName NAME_AShootingHUD_OnUpdateMyHP = FName(TEXT("OnUpdateMyHP"));
+	void AShootingHUD::OnUpdateMyHP(float CuerHP, float MaxHP)
+	{
+		ShootingHUD_eventOnUpdateMyHP_Parms Parms;
+		Parms.CuerHP=CuerHP;
+		Parms.MaxHP=MaxHP;
+		ProcessEvent(FindFunctionChecked(NAME_AShootingHUD_OnUpdateMyHP),&Parms);
+	}
 	void AShootingHUD::StaticRegisterNativesAShootingHUD()
 	{
+		UClass* Class = AShootingHUD::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnUpdateMyHP", &AShootingHUD::execOnUpdateMyHP },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics
+	{
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_CuerHP;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHP;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::NewProp_CuerHP = { "CuerHP", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShootingHUD_eventOnUpdateMyHP_Parms, CuerHP), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::NewProp_MaxHP = { "MaxHP", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ShootingHUD_eventOnUpdateMyHP_Parms, MaxHP), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::NewProp_CuerHP,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::NewProp_MaxHP,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xf0\xb8\xae\xbe\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xd4\xbc\xef\xbf\xbd.\n" },
+#endif
+		{ "ModuleRelativePath", "Public/GameMode/ShootingHUD.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xf0\xb8\xae\xbe\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xd4\xbc\xef\xbf\xbd." },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AShootingHUD, nullptr, "OnUpdateMyHP", nullptr, nullptr, Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::PropPointers), sizeof(ShootingHUD_eventOnUpdateMyHP_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::Function_MetaDataParams), Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::PropPointers) < 2048);
+	static_assert(sizeof(ShootingHUD_eventOnUpdateMyHP_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AShootingHUD);
 	UClass* Z_Construct_UClass_AShootingHUD_NoRegister()
@@ -27,6 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeShootingHUD() {}
 	struct Z_Construct_UClass_AShootingHUD_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -47,6 +114,10 @@ void EmptyLinkFunctionForGeneratedCodeShootingHUD() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_ShootingCodeGame,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShootingHUD_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_AShootingHUD_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AShootingHUD_OnUpdateMyHP, "OnUpdateMyHP" }, // 2981221713
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AShootingHUD_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AShootingHUD_Statics::Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
@@ -91,11 +162,11 @@ void EmptyLinkFunctionForGeneratedCodeShootingHUD() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AShootingHUD_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AShootingHUD_Statics::PropPointers),
 		0,
 		0x009002ACu,
@@ -121,9 +192,9 @@ void EmptyLinkFunctionForGeneratedCodeShootingHUD() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Work_VR16_ShootingCodeGame_Source_ShootingCodeGame_Public_GameMode_ShootingHUD_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AShootingHUD, AShootingHUD::StaticClass, TEXT("AShootingHUD"), &Z_Registration_Info_UClass_AShootingHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShootingHUD), 3526394414U) },
+		{ Z_Construct_UClass_AShootingHUD, AShootingHUD::StaticClass, TEXT("AShootingHUD"), &Z_Registration_Info_UClass_AShootingHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AShootingHUD), 3904020099U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Work_VR16_ShootingCodeGame_Source_ShootingCodeGame_Public_GameMode_ShootingHUD_h_2585663331(TEXT("/Script/ShootingCodeGame"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Work_VR16_ShootingCodeGame_Source_ShootingCodeGame_Public_GameMode_ShootingHUD_h_217948149(TEXT("/Script/ShootingCodeGame"),
 		Z_CompiledInDeferFile_FID_Work_VR16_ShootingCodeGame_Source_ShootingCodeGame_Public_GameMode_ShootingHUD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Work_VR16_ShootingCodeGame_Source_ShootingCodeGame_Public_GameMode_ShootingHUD_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

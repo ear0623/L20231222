@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerState.h"
 #include "ShootingPlayerState.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FDele_UpdateHp, float, CurHp, float, MaxHp);
+
 /**
  * 
  */
@@ -13,6 +15,9 @@ UCLASS()
 class SHOOTINGCODEGAME_API AShootingPlayerState : public APlayerState
 {
 	GENERATED_BODY()
+
+public:
+	AShootingPlayerState();
 
 public:
 	UFUNCTION()
@@ -28,4 +33,6 @@ public:
 	UPROPERTY(ReplicatedUsing = OnRep_CurHP)
 	float m_CurHP;
 	
+	UPROPERTY(BlueprintAssignable,VisibleAnywhere,BlueprintCallable)
+	FDele_UpdateHp m_Dele_UpdateHp;
 };

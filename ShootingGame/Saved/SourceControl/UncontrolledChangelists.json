@@ -14,7 +14,6 @@
 				"C:/Work/VR16/ShootingGame/Content/Characters/Mannequins/Animations/InPlace/Rifle_Reload_2_Montage.uasset",
 				"C:/Work/VR16/ShootingGame/Content/Characters/Mannequins/Animations/ABP_Shooting.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/Widget/ShootingHudWith.uasset",
-				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_Hud.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_ShootingGameMode.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_ShootingPlayerState.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_ShootingPlayerController.uasset",
@@ -22,8 +21,6 @@
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_Left.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_MoveRotation.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_Switch.uasset",
-				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/B2/Z9RS6CQB9A514LX7RGY0VQ.uasset",
-				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/ZJ/5QI1Y64KSGT1XDLJM3GZPB.uasset",
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/K8/8LICLG4M8G8H7ISHH77V0I.uasset",
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/T5/KO4EPF2FL24BRLXHB4QD3Z.uasset",
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/9/GS/H116SDKVPD8AXJ9IHGQZIB.uasset",
@@ -33,10 +30,19 @@
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/10/87SOQA3I1PBWF300XUOH8D.uasset",
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/6/O7/9AIGQFT1PO02ZR6IMENH7Z.uasset",
 				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/9/B4/3ZLAISEOFS7MIDT3NI9TNW.uasset",
-				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/IO/XLKZNNAHBJ2HZRNNRA2LKW.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_ShootingHud.uasset",
 				"C:/Work/VR16/ShootingGame/Content/ShootingGame/Widget/WBP_Button.uasset",
-				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/NewBlueprint.uasset"
+				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/NewBlueprint.uasset",
+				"C:/Work/VR16/ShootingGame/Content/ShootingGame/BP_Weapon.uasset",
+				"C:/Work/VR16/ShootingGame/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset",
+				"C:/Work/VR16/ShootingGame/Content/ShootingGame/AnimNotify_Shoot.uasset",
+				"C:/Work/VR16/ShootingGame/Content/Characters/Mannequins/Animations/InPlace/Rifle_ShootOnce_Montage.uasset",
+				"C:/Work/VR16/ShootingGame/Content/ShootingGame/BPI_Weapon.uasset",
+				"C:/Work/VR16/ShootingGame/Content/FPS_Weapon_Bundle/Weapons/Meshes/Ka47/SM_KA47_X.uasset",
+				"C:/Work/VR16/ShootingGame/Content/ShootingGame/GameMode/BP_Hud.uasset",
+				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/2/B2/Z9RS6CQB9A514LX7RGY0VQ.uasset",
+				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/ZJ/5QI1Y64KSGT1XDLJM3GZPB.uasset",
+				"C:/Work/VR16/ShootingGame/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/IO/XLKZNNAHBJ2HZRNNRA2LKW.uasset"
 			]
 		}
 	]

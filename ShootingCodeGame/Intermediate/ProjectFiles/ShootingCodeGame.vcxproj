@@ -127,6 +127,16 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\BluePrints\WeaponInterface.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\BluePrints\Weapons.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ShootingCodeGame\Private\GameMode\ShootingCodeGameCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -148,6 +158,8 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\MyBall.h"/>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\WeaponInterface.h"/>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\Weapons.h"/>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingCodeGameCharacter.h"/>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingCodeGameMode.h"/>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingHUD.h"/>

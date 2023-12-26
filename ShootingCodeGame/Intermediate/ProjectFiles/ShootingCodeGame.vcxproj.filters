@@ -51,6 +51,12 @@
     <ClCompile Include="..\..\Source\ShootingCodeGame\Private\BluePrints\MyBall.cpp">
       <Filter>Source\ShootingCodeGame\Private\BluePrints</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\BluePrints\WeaponInterface.cpp">
+      <Filter>Source\ShootingCodeGame\Private\BluePrints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\BluePrints\Weapons.cpp">
+      <Filter>Source\ShootingCodeGame\Private\BluePrints</Filter>
+    </ClCompile>
     <Filter Include="Source\ShootingCodeGame\Private\GameMode">
       <UniqueIdentifier>{F5D31DAA-5399-3779-BAF3-7DD454C9FBD7}</UniqueIdentifier>
     </Filter>
@@ -73,6 +79,12 @@
       <UniqueIdentifier>{007622AD-5A26-36B0-8C16-FAED9DCC5410}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\MyBall.h">
+      <Filter>Source\ShootingCodeGame\Public\BluePrints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\WeaponInterface.h">
+      <Filter>Source\ShootingCodeGame\Public\BluePrints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\BluePrints\Weapons.h">
       <Filter>Source\ShootingCodeGame\Public\BluePrints</Filter>
     </ClInclude>
     <Filter Include="Source\ShootingCodeGame\Public\GameMode">

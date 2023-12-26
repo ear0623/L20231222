@@ -4,12 +4,19 @@
 #include "GameMode/ShootingPlayerState.h"
 #include "Net/UnrealNetwork.h"
 
+AShootingPlayerState::AShootingPlayerState():m_CurHP(100)
+{
+
+}
+
 void AShootingPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps)const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(AShootingPlayerState, m_CurHP);//±ÔÄ¢
 }
+
+
 
 void AShootingPlayerState::AddDamage(float Damage)
 {
@@ -20,4 +27,9 @@ void AShootingPlayerState::AddDamage(float Damage)
 void AShootingPlayerState::OnRep_CurHP()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red,FString::Printf(TEXT("OnRep_CureHP = %f"),m_CurHP));
+	if (m_Dele_UpdateHp.IsBound())
+	{
+		m_Dele_UpdateHp.Broadcast(m_CurHP, 100);
+	}
+	
 }
