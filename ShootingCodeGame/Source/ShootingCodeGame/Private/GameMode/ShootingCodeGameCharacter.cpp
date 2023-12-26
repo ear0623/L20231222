@@ -12,6 +12,7 @@
 #include "InputActionValue.h"
 #include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
+#include "GameMode/ShootingPlayerState.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -113,7 +114,15 @@ void AShootingCodeGameCharacter::ReqPressF_Implementation()
 
 void AShootingCodeGameCharacter::ResPressF_Implementation()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.01f, FColor::Blue, TEXT("RESPressF"));
+	GEngine->AddOnScreenDebugMessage(-1, 15.01f, FColor::Blue, TEXT("RESPressF"));//int32 key-> customize 
+	
+	AShootingPlayerState* ps = Cast<AShootingPlayerState>(GetPlayerState());
+	if (false==IsValid(ps))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Ps is not vaild"));
+		return;
+	}
+	ps->AddDamage(10.0f);
 }
 
 

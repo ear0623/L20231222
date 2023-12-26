@@ -11,6 +11,7 @@
     <None Include="..\..\Source\ShootingCodeGameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -59,6 +60,12 @@
     <ClCompile Include="..\..\Source\ShootingCodeGame\Private\GameMode\ShootingCodeGameMode.cpp">
       <Filter>Source\ShootingCodeGame\Private\GameMode</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\GameMode\ShootingHUD.cpp">
+      <Filter>Source\ShootingCodeGame\Private\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ShootingCodeGame\Private\GameMode\ShootingPlayerState.cpp">
+      <Filter>Source\ShootingCodeGame\Private\GameMode</Filter>
+    </ClCompile>
     <Filter Include="Source\ShootingCodeGame\Public">
       <UniqueIdentifier>{5DE80FAF-31E0-395E-B40F-6CB4BCAFF4B3}</UniqueIdentifier>
     </Filter>
@@ -75,6 +82,12 @@
       <Filter>Source\ShootingCodeGame\Public\GameMode</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingCodeGameMode.h">
+      <Filter>Source\ShootingCodeGame\Public\GameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingHUD.h">
+      <Filter>Source\ShootingCodeGame\Public\GameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ShootingCodeGame\Public\GameMode\ShootingPlayerState.h">
       <Filter>Source\ShootingCodeGame\Public\GameMode</Filter>
     </ClInclude>
   </ItemGroup>
